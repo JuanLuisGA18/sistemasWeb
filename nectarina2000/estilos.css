@@ -1,0 +1,200 @@
+.header
+{
+display: inline-block;  
+width: 90%;
+background-color:lightcoral;
+text-align: left;
+border-style: solid;
+border-width: 2px;
+border-color: black;
+
+}
+#body
+{
+    display: inline-block;
+    background-color:darkorange;
+    height: 80%;
+    width: 90%;
+    
+    
+}
+#aplicacion
+{
+    display: inline-block;
+    
+    background-color:darkorange;
+    height: 80%;
+    width: 90%;
+    
+    
+}
+.fondo
+{
+    background-color: chocolate;
+}
+#menu
+{
+    display: inline-block;
+    background-color: lightorange;
+    width: 90%;
+    height: 10%;
+    text-align: left;
+}
+.footer
+{
+    background-color: orange;
+    width: 90%;
+    height: 10%;
+
+}
+#durazno
+{
+    width: 30%;
+    width: fit-content;
+}
+h1
+{
+    font-size: 1cm;
+    font-family: fantasy;
+    font-stretch: extra-expanded;
+}
+
+#indice
+{
+   
+    width: fit-content;
+}
+
+#figgirada
+{-webkit-transform: scaleX(-1);
+-moz-transform: scaleX(-1);
+transform: scaleX(-1);
+filter: FlipH;
+}
+#titulo
+{
+    font-size: xx-large;
+}
+
+.boton
+{
+width: auto;
+height: 2cm;
+border-style: groove;
+background-color: coral;
+font-size: .70cm;
+font-family: fantasy;
+border:black;
+border-style:dotted;
+
+}
+#reloj
+{
+    
+    width: 5cm;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 150px;
+    border-radius: 25%;
+    font-family: fantasy;
+    font-size: 300%;
+    background-image: url("reloj.png");
+    background-size: 5cm;
+    color: green;
+}
+
+#animacion
+{
+    
+    width: 5cm;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 150px;
+    border-radius: 25%;
+    background-image: url("animacion.gif");
+    background-size: contain;
+}
+ #mensajes
+ {
+  
+    width: 5cm;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 150px;
+    border-radius: 25%;
+    background-color: coral;
+    border-style: dotted;
+    font-size: x-large;    
+}
+#apoyo
+{
+    
+    width: 35%;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 75px;
+    border-radius: 5%;
+    font-size: xx-large;
+    font-family: fantasy;
+    background-color:coral;
+    color:black;
+
+}
+#completos
+ {
+
+    width: 35%;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 75px;
+    border-radius: 5%;
+    font-size: large;
+    font-family: fantasy;
+    background-color:coral;
+    color:black;    
+    border-style: dotted;
+}
+#alarma
+{
+    display: none;
+}
+#ejercicio
+{
+    width: 70%;
+    height: 5cm;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    border-radius: 5%;
+    font-size: large;
+    font-family: fantasy;
+    background-color: coral;
+    color:black;  
+    display: none;
+    border-style: dotted;
+}
+.banner
+{
+    border-style: dotted;
+    display: inline;
+    
+}
+.cuadrotexto
+{
+    width: 90%;
+    background-color: darkorange;
+    text-align: left;
+}
+p
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: fantasy;
+    text-align: left;
+}
