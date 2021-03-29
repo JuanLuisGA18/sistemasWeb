@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        var VOperando1='', VOperando2='',VLlenado=1, VOperacion, VResultado=0;
+        //Escribir los caracteres
+        function Fescribir(Caracter)
+        {
+           
+           if(VLlenado<3)
+            {
+                //Condición de inicio
+                //Esta condición determina si se va a realizar una operación o se va a agregar un número
+                if(Caracter!="S"&&Caracter!="R"&&Caracter!="D"&&Caracter!="M"&&Caracter!="I")
+                {
+                    
+                    //Esta condición valida que no se agrege un número cuando el caracter a agregar sea 0 y el unico caracter sea 0 
+                    if(VLlenado==1)
+                    {
+                        //Si El operando dos es distinto a "N" se ralizarpa la última operación indicada
+                        
+                        VOperando1=VOperando1+Caracter;
+
+                        
+
+                        document.getElementById("Resultado").value=VOperando1;
+                    }//Fin condición no cero
+                    //Condición para llenar el segundo operando
+                    
+                    else if(VLlenado==2)
+                    {
+                    
+                        VOperando2=VOperando2+Caracter;
+                        
+                        document.getElementById("Resultado").value=VOperando2;
+                    
+                    }
+                    //Realizar una operación distinta al igual
+                }
+                    //Fin operación
+                else if(Caracter!="I") //Resultado final
+                    {
+                            
+                        if(VLlenado==1)
+                        {
+                            VOperacion=Caracter;
+                            VLlenado++;
+                        }
+                        else
+                        {
+                            alert("Presione \"=\" para indicar el resultado");
+                        }
+                    }
+                else if(Caracter=='I')
+                    {
+                        
+                        
+                        Res=FOperacion(VOperando1,VOperando2,VOperacion);
+                        document.getElementById("Resultado").value=Res;
+                        VLlenado++;
+
+                    }
+                //Fin condición de escritura
+            }//Fin condición inicio
+            else
+            {
+                alert("Presione \"clr\" para continuar");
+            }
+        }//Fin escribir los caracteres
+        //Realizar la operación
+        function FOperacion(Operando1,Operando2,Operacion)
+        {
+            //Selección de operación
+            switch(Operacion)
+            {
+                //Suma
+                case"S":
+                {
+                    Res=parseFloat(Operando1)+parseFloat(Operando2);
+                    return Res;
+                    break;
+                }
+                //Fin suma
+                //Resta
+                case"R":
+                {
+                    Res=parseFloat(Operando1)-parseFloat(Operando2);
+                    return Res;
+                    break;
+                }
+                //Fin Resta
+                //Multiplicación
+                case"M":
+                {
+                    Res=parseFloat(Operando1)*parseFloat(Operando2);
+                    return Res;
+                    break;
+                }
+                //Fin Multiplicación
+                //División
+                case"D":
+                {
+                    if(Operando2=="0")
+                    {
+                        alert("No es posible dividir entre cero");
+                    }
+                    else
+                    {
+                    Res=parseFloat(Operando1)/parseFloat(Operando2);
+                    return Res;
+                    }
+                    break;
+                }
+                //Fin División
+            }
+            //Fin selección de operación
+        
+        }
+        //Fin realizar la operación
+        //Limpiar
+        function Flimpiar()
+        {
+            document.getElementById("Resultado").value="0";
+            VOperando1="";
+            VOperando2="";
+            VResultado=0;
+            VLlenado=1;
+            
+        }
+        //Fin Limpiar
+        </script>
+    </head>
+    <body onload="Flimpiar()">
+        <center>
+        <input type="text" value="0" id="Resultado" style="width: 250px; height: 30px; text-align: right;" >
+        <br>
+        <br>
+        <input type="button" value="7" id="7" style="width: 60px; height: 60px;" onclick="Fescribir('7')">
+        <input type="button" value="8" id="8" style="width: 60px; height: 60px;" onclick="Fescribir('8')">
+        <input type="button" value="9" id="9" style="width: 60px; height: 60px;" onclick="Fescribir('9')">
+        <input type="button" value="-" id="-" style="width: 60px; height: 60px;" onclick="Fescribir('R')">
+        <br>
+        <input type="button" value="4" id="4" style="width: 60px; height: 60px;" onclick="Fescribir('4')">
+        <input type="button" value="5" id="5" style="width: 60px; height: 60px;" onclick="Fescribir('5')">
+        <input type="button" value="6" id="6" style="width: 60px; height: 60px;" onclick="Fescribir('6')">
+        <input type="button" value="+" id="+" style="width: 60px; height: 60px;" onclick="Fescribir('S')">
+        <br>
+        <input type="button" value="1" id="1" style="width: 60px; height: 60px;" onclick="Fescribir('1')">
+        <input type="button" value="2" id="2" style="width: 60px; height: 60px;" onclick="Fescribir('2')">
+        <input type="button" value="3" id="3" style="width: 60px; height: 60px;" onclick="Fescribir('3')">
+        <input type="button" value="*" id="*" style="width: 60px; height: 60px;" onclick="Fescribir('M')">
+        <br>
+        <input type="button" value="0" id="0" style="width: 124px; height: 60px;" onclick="Fescribir('0')">
+        <input type="button" value="clr" id="clr" style="width: 60px; height: 60px;" onclick="Flimpiar()">
+        <input type="button" value="/" id="/" style="width: 60px; height: 60px;" onclick="Fescribir('D')">
+        <br>
+        <input type="button" value="=" id="=" style="width: 250px; height: 60px;" onclick="Fescribir('I')">
+        </center>
+
+    </body>
+</html>
